@@ -245,32 +245,5 @@ callButton9.addEventListener('click', function(){
     
 })
 
-// history
-const historyList = document.getElementById('history-list');
-const clearButton = document.getElementById('clear-history-button');
-
-// Function to add a new item to the call history list
-function addHistoryItem(heading, number) {
-    const historyItem = document.createElement('div');
-    
-    // Use flexbox and padding to create the correct layout
-    historyItem.innerHTML = `
-        <div class="flex justify-between items-center py-2 border-b border-gray-200">
-            <div>
-                <h4 class="font-semibold text-sm">${heading}</h4>
-                <p class="text-xs text-gray-600">${number}</p>
-            </div>
-            <span class="text-xs text-gray-400">${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
-        </div>
-    `;
-    
-    // Add the new item to the top of the history list
-    historyList.prepend(historyItem);
-}
-
-// Function to clear all items from the history list
-function clearHistory() {
-    historyList.innerHTML = '';
-}
 
 
